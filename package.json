@@ -1,5 +1,5 @@
 {
-  "name": "todos",
+  "name": "grades",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,17 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodingHouseFI/todo-from-scratch.git"
+    "url": "git+https://github.com/mpatc/grades.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CodingHouseFI/todo-from-scratch/issues"
+    "url": "https://github.com/mpatc/grades.git"
   },
-  "homepage": "https://github.com/CodingHouseFI/todo-from-scratch#readme",
+  "homepage": "https://github.com/mpatc/grades.git",
   "dependencies": {
     "body-parser": "^1.15.0",
+    "bower": "^1.7.9",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "moment": "^2.13.0",
