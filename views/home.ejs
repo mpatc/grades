@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grade App</title>
+
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="home.js"></script>
+
+</head>
+
+<body>
+    <div class="conmaxer">
+        <h1 class="text-center">Grade App!</h1>
+
+        <button class="btn btn-default btn-lg newGrade">New Grade</button>
+
+
+        <table class="table-hover col-md-12">
+            <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Score</th>
+                    <th>Max</th>
+                    <th>Letter</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <% for(var i = 0; i < grades.length; i++) { %>
+                    <tr class="addedGrade" data-id=<%=grades[i].id%> >
+                        <td>
+                            <%= grades[i].gradeName %>
+                        </td>
+                        <td>
+                            <%= grades[i].gradeScore %>
+                        </td>
+                        <td>
+                            <%= grades[i].max %>
+                        </td>
+                        <td>
+                            <% if((grades[i].gradeScore / grades[i].max) > .9) { %>
+                                <h4>A!</h4>
+                                <% } else if ((grades[i].gradeScore / grades[i].max) > .8) { %>
+                                    <h4>B!</h4>
+                                    <% } else if ((grades[i].gradeScore / grades[i].max) > .7) { %>
+                                        <h4>C!</h4>
+                                        <% } else if ((grades[i].gradeScore / grades[i].max) > .6) { %>
+                                            <h4>D!</h4>
+                                            <% } else { %>
+                                                <h4>F!</h4>
+                                                <% } %>
+                        </td>
+                    </tr>
+
+                    <%  }  %>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class='newGradeForm'>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">New Grade</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="newGradeDesc">Grade Name</label>
+                            <input type="text" class="form-control" id="newGradeDesc" placeholder="Class Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newGradegradeScore">Grade</label>
+                            <input type="number" class="form-control" id="newGradegradeScore" placeholder="Your Score"required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newGradeMaxScore">Max</label>
+                            <input type="number" class="form-control" id="newGradeMaxScore" placeholder="Highest Possible Score"required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create Grade</button>
+                        </div>
+                </form>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+
+</body>
+
+</html>
