@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <title>Grade App</title>
 
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <script src="/bower_components/moment/moment.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="home.js"></script>
 
 </head>
@@ -64,7 +64,10 @@
             </tbody>
         </table>
     </div>
-<div><h1 class="center-block" style="color:red">Double Click To Delete!</h1><br><h2>Delete and Resubmit to Edit</h2></div>
+    <div>
+        <h1 class="center-block" style="color:red">Double Click To Delete!</h1>
+        <br>
+        <h2>Delete and Resubmit to Edit</h2></div>
 
 
     <div class="modal fade" tabindex="-1" role="dialog">
@@ -82,11 +85,11 @@
                         </div>
                         <div class="form-group">
                             <label for="newGradegradeScore">Grade</label>
-                            <input type="number" class="form-control" id="newGradegradeScore" placeholder="Your Score"required>
+                            <input type="number" class="form-control" id="newGradegradeScore" placeholder="Your Score" required>
                         </div>
                         <div class="form-group">
                             <label for="newGradeMaxScore">Max</label>
-                            <input type="number" class="form-control" id="newGradeMaxScore" placeholder="Highest Possible Score"required>
+                            <input type="number" class="form-control" id="newGradeMaxScore" placeholder="Highest Possible Score" required>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default btn-warning" data-dismiss="modal">Close</button>
